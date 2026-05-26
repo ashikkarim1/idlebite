@@ -158,32 +158,69 @@ export default function HomePage() {
 
           {/* Timeline visualization */}
           <div className="mt-20 pt-20 border-t border-gray-200">
-            <div className="bg-slate-900 rounded-lg p-8 text-white text-center">
-              <div className="mb-8">
-                <p className="text-lg font-semibold mb-4">Your Kitchen Flow</p>
-                <div className="flex items-center justify-center gap-4 flex-wrap">
-                  <div className="text-center">
-                    <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center font-bold text-sm mb-2">📹</div>
-                    <div className="text-xs font-medium">Kitchen</div>
-                    <div className="text-xs text-slate-400">Capacity 30%</div>
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-white">
+              <h3 className="text-2xl font-bold mb-12 text-center">Your Kitchen Flow</h3>
+
+              <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+                {/* Step 1: Kitchen */}
+                <div className="flex flex-col items-center">
+                  <div className="w-24 h-24 rounded-full bg-white/20 border-2 border-white flex items-center justify-center mb-4">
+                    <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
                   </div>
-                  <div className="text-2xl text-slate-500">→</div>
                   <div className="text-center">
-                    <div className="bg-purple-500 rounded-full w-12 h-12 flex items-center justify-center font-bold text-sm mb-2">🧠</div>
-                    <div className="text-xs font-medium">AI Decides</div>
-                    <div className="text-xs text-slate-400">15% off optimal</div>
+                    <div className="font-semibold text-lg">Kitchen</div>
+                    <div className="text-blue-100 text-sm">Capacity 30%</div>
                   </div>
-                  <div className="text-2xl text-slate-500">→</div>
+                </div>
+
+                {/* Arrow */}
+                <div className="hidden md:flex items-center">
+                  <svg className="w-8 h-8 text-white/60" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 10 10.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+
+                {/* Step 2: AI */}
+                <div className="flex flex-col items-center">
+                  <div className="w-24 h-24 rounded-full bg-white/20 border-2 border-white flex items-center justify-center mb-4">
+                    <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5a4 4 0 100-8 4 4 0 000 8z" />
+                    </svg>
+                  </div>
                   <div className="text-center">
-                    <div className="bg-green-500 rounded-full w-12 h-12 flex items-center justify-center font-bold text-sm mb-2">📱</div>
-                    <div className="text-xs font-medium">All Platforms</div>
-                    <div className="text-xs text-slate-400">Customer sees offer</div>
+                    <div className="font-semibold text-lg">AI Decides</div>
+                    <div className="text-blue-100 text-sm">15% off optimal</div>
+                  </div>
+                </div>
+
+                {/* Arrow */}
+                <div className="hidden md:flex items-center">
+                  <svg className="w-8 h-8 text-white/60" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 10 10.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+
+                {/* Step 3: Platforms */}
+                <div className="flex flex-col items-center">
+                  <div className="w-24 h-24 rounded-full bg-white/20 border-2 border-white flex items-center justify-center mb-4">
+                    <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div className="text-center">
+                    <div className="font-semibold text-lg">All Platforms</div>
+                    <div className="text-blue-100 text-sm">Customer sees offer</div>
                   </div>
                 </div>
               </div>
-              <p className="text-slate-300 text-sm">
-                All happening every 5 seconds. 24/7. Autonomous. No manual work.
-              </p>
+
+              <div className="text-center border-t border-white/20 pt-6">
+                <p className="text-white font-medium">
+                  All happening every 5 seconds. 24/7. Autonomous. No manual work.
+                </p>
+              </div>
             </div>
           </div>
         </div>
