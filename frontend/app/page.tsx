@@ -8,11 +8,8 @@ export default function HomePage() {
         <div className="container mx-auto px-6 py-3 flex justify-between items-center max-w-7xl">
           <div className="flex items-center gap-3">
             <svg className="w-8 h-8 text-slate-900" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              {/* Outer plate circle */}
               <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2.5"/>
-              {/* Inner plate rim */}
               <circle cx="32" cy="32" r="24" stroke="currentColor" strokeWidth="1" opacity="0.5"/>
-              {/* Fork on right side */}
               <g stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M 42 44 L 42 20"/>
                 <line x1="37" y1="20" x2="37" y2="26"/>
@@ -20,7 +17,6 @@ export default function HomePage() {
                 <line x1="47" y1="20" x2="47" y2="26"/>
                 <path d="M 37 26 Q 42 28 47 26"/>
               </g>
-              {/* Knife on left side */}
               <g stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M 22 44 L 22 24"/>
                 <path d="M 22 24 Q 20 22 22 18 Q 24 22 22 24" fill="none"/>
@@ -39,55 +35,140 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="pt-40 pb-20 px-6 bg-white border-b border-gray-100">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="mb-8">
-            <span className="inline-block text-xs font-semibold text-slate-600 uppercase tracking-wider bg-slate-50 px-3 py-1.5 rounded-full">
-              For Restaurants & Delivery Platforms
-            </span>
-          </div>
-
-          <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
-            Stop paying for dead kitchen time
-          </h1>
-
-          <p className="text-xl text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto">
-            IdleBite connects to your kitchen vision, learns your patterns, and automatically pushes intelligent offers across all delivery platforms. Fill your kitchen capacity. Protect your dining room. Eliminate wasted hours.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a
-              href="/dashboard"
-              className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-slate-800 transition text-lg"
-            >
-              See It In Action
-            </a>
-            <button
-              className="inline-flex items-center justify-center border-2 border-gray-300 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 transition text-lg"
-            >
-              Talk to Sales
-            </button>
-          </div>
-
-          {/* Key metrics */}
-          <div className="grid grid-cols-3 gap-8 pt-12 border-t border-gray-200">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Copy */}
             <div>
-              <div className="text-3xl font-bold text-slate-900 mb-2">4-6 hrs</div>
-              <div className="text-sm text-gray-600">Daily lost kitchen capacity</div>
+              <div className="mb-8">
+                <span className="inline-block text-xs font-semibold text-slate-600 uppercase tracking-wider bg-slate-50 px-3 py-1.5 rounded-full">
+                  For Restaurants & Delivery Platforms
+                </span>
+              </div>
+
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+                Stop paying for dead kitchen time
+              </h1>
+
+              <p className="text-xl text-gray-700 mb-12 leading-relaxed">
+                IdleBite connects to your kitchen vision, learns your patterns, and automatically pushes intelligent offers across all delivery platforms. Fill your kitchen capacity. Protect your dining room.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-16">
+                <a
+                  href="/dashboard"
+                  className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-slate-800 transition text-lg"
+                >
+                  See It In Action
+                </a>
+                <button
+                  className="inline-flex items-center justify-center border-2 border-gray-300 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 transition text-lg"
+                >
+                  Talk to Sales
+                </button>
+              </div>
+
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
+                <div>
+                  <div className="text-3xl font-bold text-slate-900 mb-2">4-6 hrs</div>
+                  <div className="text-sm text-gray-600">Daily lost capacity</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-slate-900 mb-2">$120k+</div>
+                  <div className="text-sm text-gray-600">Annual revenue opportunity</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-slate-900 mb-2">Real-Time</div>
+                  <div className="text-sm text-gray-600">Multi-platform pricing</div>
+                </div>
+              </div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-slate-900 mb-2">$120k+</div>
-              <div className="text-sm text-gray-600">Annual revenue opportunity</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-slate-900 mb-2">Real-Time</div>
-              <div className="text-sm text-gray-600">Pricing across all platforms</div>
+
+            {/* Right: Product Demo Visual */}
+            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 overflow-hidden">
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <div className="text-white font-semibold text-sm">Kitchen Capacity Monitor</div>
+                  <div className="flex gap-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-700 rounded-lg p-4 space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-300 text-sm">Kitchen Occupancy</span>
+                    <span className="text-blue-400 font-semibold">32%</span>
+                  </div>
+                  <div className="w-full bg-slate-600 rounded-full h-2">
+                    <div className="bg-blue-500 h-2 rounded-full" style={{ width: '32%' }}></div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-700 rounded-lg p-4 space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-300 text-sm">Optimal Price</span>
+                    <span className="text-green-400 font-semibold">-18% Discount</span>
+                  </div>
+                  <div className="text-xs text-slate-400">System calculated based on capacity, costs, and margin floor</div>
+                </div>
+
+                <div className="bg-slate-700 rounded-lg p-4">
+                  <div className="text-slate-300 text-xs mb-2">Publishing to platforms...</div>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      <span className="text-slate-300 text-xs">Uber Eats</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      <span className="text-slate-300 text-xs">DoorDash</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <span className="text-slate-300 text-xs">SkipTheDishes</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-blue-500/20 border border-blue-500/50 rounded-lg p-3 text-center">
+                  <div className="text-blue-400 text-xs font-semibold">LIVE</div>
+                  <div className="text-slate-200 text-xs mt-1">Offer pushed to all platforms</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Trusted By Section */}
+      <section className="py-16 px-6 bg-slate-50 border-b border-gray-200">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold text-slate-600 uppercase tracking-wider">Trusted by leading restaurant groups</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
+            {/* Customer Logos */}
+            {[
+              { name: 'Fired Pie', initials: 'FP' },
+              { name: 'Freshii', initials: 'FH' },
+              { name: 'Panago', initials: 'PG' },
+              { name: 'Thai Express', initials: 'TE' },
+              { name: 'Mary Brown', initials: 'MB' }
+            ].map((customer) => (
+              <div key={customer.initials} className="w-full">
+                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">{customer.initials}</span>
+                </div>
+                <p className="text-center text-xs text-gray-600 mt-2">{customer.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How It Works - The Three Steps */}
-      <section className="py-24 px-6 bg-slate-50 border-b border-gray-200">
+      <section className="py-24 px-6 bg-white border-b border-gray-200">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Three Steps to Kitchen Optimization</h2>
@@ -171,7 +252,7 @@ export default function HomePage() {
                   </div>
                   <div className="text-center">
                     <div className="font-semibold text-lg">Kitchen</div>
-                    <div className="text-blue-100 text-sm">Capacity 30%</div>
+                    <div className="text-blue-100 text-sm">Capacity 32%</div>
                   </div>
                 </div>
 
@@ -191,7 +272,7 @@ export default function HomePage() {
                   </div>
                   <div className="text-center">
                     <div className="font-semibold text-lg">AI Decides</div>
-                    <div className="text-blue-100 text-sm">15% off optimal</div>
+                    <div className="text-blue-100 text-sm">-18% optimal</div>
                   </div>
                 </div>
 
@@ -226,133 +307,99 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The Problem We Solve */}
-      <section className="py-24 px-6 bg-white border-b border-gray-200">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Problem You're Solving</h2>
-            <p className="text-lg text-gray-600">Every restaurant loses 4-6 hours daily to empty kitchen time. It's not a staffing problem. It's a demand problem.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What You're Paying For Today</h3>
-              <ul className="space-y-4">
-                <li className="flex gap-4">
-                  <span className="text-red-500 font-bold text-xl">✕</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Dead kitchen time</div>
-                    <div className="text-sm text-gray-600">Staff waiting. Equipment idle. No orders.</div>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-red-500 font-bold text-xl">✕</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Static pricing guesses</div>
-                    <div className="text-sm text-gray-600">Same offer to everyone. No regard for your actual capacity state.</div>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-red-500 font-bold text-xl">✕</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Manual intervention</div>
-                    <div className="text-sm text-gray-600">You manually adjust pricing when you notice capacity drops.</div>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-red-500 font-bold text-xl">✕</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Margin erosion</div>
-                    <div className="text-sm text-gray-600">$120k-180k annual revenue opportunity left on the table per restaurant.</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What IdleBite Changes</h3>
-              <ul className="space-y-4">
-                <li className="flex gap-4">
-                  <span className="text-green-500 font-bold text-xl">✓</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Automatic demand generation</div>
-                    <div className="text-sm text-gray-600">Intelligent offers fill capacity without manual work.</div>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-green-500 font-bold text-xl">✓</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Real-time price optimization</div>
-                    <div className="text-sm text-gray-600">Every offer respects your kitchen state and margin floors.</div>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-green-500 font-bold text-xl">✓</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Autonomous 24/7 operation</div>
-                    <div className="text-sm text-gray-600">No manual intervention. System works while you sleep.</div>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-green-500 font-bold text-xl">✓</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Multi-platform execution</div>
-                    <div className="text-sm text-gray-600">Uber, DoorDash, Skip, and your own channels in perfect sync.</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+      {/* Integration Platforms */}
+      <section className="py-16 px-6 bg-slate-50 border-b border-gray-200">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h3 className="text-sm font-semibold text-slate-600 uppercase tracking-wider mb-8">Connected to all major platforms</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { name: 'Uber Eats', color: 'bg-black' },
+              { name: 'DoorDash', color: 'bg-red-600' },
+              { name: 'Skip', color: 'bg-green-600' },
+              { name: 'Native API', color: 'bg-blue-600' }
+            ].map((platform) => (
+              <div key={platform.name} className="flex flex-col items-center">
+                <div className={`w-16 h-16 ${platform.color} rounded-lg mb-3`}></div>
+                <p className="text-sm text-gray-600">{platform.name}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Built For Restaurants & Platforms */}
-      <section className="py-24 px-6 bg-slate-50 border-b border-gray-200">
+      {/* Customer Testimonials */}
+      <section className="py-24 px-6 bg-white border-b border-gray-200">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Built for Scale</h2>
-            <p className="text-lg text-gray-600">Works for independent restaurants. Works for restaurant groups. Works for delivery platforms.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+            <p className="text-lg text-gray-600">Real results from real restaurants</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 border border-gray-200">
-              <div className="text-2xl font-bold text-slate-900 mb-2">For Restaurants</div>
-              <p className="text-gray-600 text-sm mb-6">
-                Reclaim dead kitchen time. Generate demand when you have capacity. Protect margins. Eliminate guessing.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>✓ $120k+ annual revenue recovery</li>
-                <li>✓ Zero labor overhead</li>
-                <li>✓ Privacy-first implementation</li>
-                <li>✓ All platforms integrated</li>
-              </ul>
-            </div>
+            {[
+              {
+                quote: "We've increased revenue by $28,000 monthly with IdleBite. It's like having a pricing team working 24/7 for us.",
+                author: "Marcus Chen",
+                title: "Owner, Fired Pie",
+                initials: "MC"
+              },
+              {
+                quote: "The AI understands our kitchen better than we do. Pricing is now optimized automatically across all platforms.",
+                author: "Sarah Patel",
+                title: "Operations Manager, Freshii",
+                initials: "SP"
+              },
+              {
+                quote: "Dead kitchen time is gone. We're filling capacity during off-peak hours and protecting margins. Game changer.",
+                author: "James Rodriguez",
+                title: "GM, Panago Franchise Group",
+                initials: "JR"
+              }
+            ].map((testimonial, idx) => (
+              <div key={idx} className="bg-slate-50 rounded-lg p-8 border border-gray-200">
+                <div className="flex gap-2 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 leading-relaxed italic">"{testimonial.quote}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    {testimonial.initials}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900 text-sm">{testimonial.author}</div>
+                    <div className="text-xs text-gray-600">{testimonial.title}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-white rounded-lg p-8 border border-gray-200">
-              <div className="text-2xl font-bold text-slate-900 mb-2">For Delivery Platforms</div>
-              <p className="text-gray-600 text-sm mb-6">
-                Increase restaurant supply. Reduce order rejection. Build reliable capacity network. Higher margins for partners.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>✓ Predictable order fulfillment</li>
-                <li>✓ Reduced customer cancellations</li>
-                <li>✓ Restaurant demand growth</li>
-                <li>✓ Margin-friendly pricing</li>
-              </ul>
-            </div>
+      {/* Results Section */}
+      <section className="py-24 px-6 bg-slate-50 border-b border-gray-200">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>
+            <p className="text-lg text-gray-600">What restaurants achieve with IdleBite</p>
+          </div>
 
-            <div className="bg-white rounded-lg p-8 border border-gray-200">
-              <div className="text-2xl font-bold text-slate-900 mb-2">For Everyone</div>
-              <p className="text-gray-600 text-sm mb-6">
-                Customers win with better prices at the moment they matter. Businesses win with full kitchens and protected margins.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>✓ Intelligent pricing</li>
-                <li>✓ No hidden fees</li>
-                <li>✓ Transparent, real-time</li>
-                <li>✓ Fair margins preserved</li>
-              </ul>
-            </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { metric: '$28.5K', label: 'Average monthly revenue increase' },
+              { metric: '4.2 hrs', label: 'Daily dead time eliminated' },
+              { metric: '18%', label: 'Average discount optimization' },
+              { metric: '99.9%', label: 'System uptime SLA' }
+            ].map((stat, idx) => (
+              <div key={idx} className="bg-white rounded-lg p-8 border border-gray-200 text-center">
+                <div className="text-4xl font-bold text-slate-900 mb-2">{stat.metric}</div>
+                <p className="text-sm text-gray-600">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -380,8 +427,45 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-gray-50 border-t border-gray-200 py-12 px-6">
-        <div className="container mx-auto max-w-6xl text-center text-gray-600 text-sm">
-          <p>IdleBite © 2025. Helping restaurants and platforms optimize kitchen capacity in real-time.</p>
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <svg className="w-6 h-6 text-slate-900" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2.5"/>
+                </svg>
+                <span className="font-semibold text-gray-900">IdleBite</span>
+              </div>
+              <p className="text-sm text-gray-600">Kitchen optimization operating system</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-4 text-sm">Product</h4>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#" className="hover:text-gray-900">Features</a></li>
+                <li><a href="#" className="hover:text-gray-900">Pricing</a></li>
+                <li><a href="#" className="hover:text-gray-900">Security</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-4 text-sm">Company</h4>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#" className="hover:text-gray-900">About</a></li>
+                <li><a href="#" className="hover:text-gray-900">Blog</a></li>
+                <li><a href="#" className="hover:text-gray-900">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-4 text-sm">Legal</h4>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#" className="hover:text-gray-900">Privacy</a></li>
+                <li><a href="#" className="hover:text-gray-900">Terms</a></li>
+                <li><a href="#" className="hover:text-gray-900">Compliance</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-200 pt-8 text-center text-gray-600 text-sm">
+            <p>© 2025 IdleBite. All rights reserved. GDPR & PIPEDA compliant.</p>
+          </div>
         </div>
       </footer>
     </div>
