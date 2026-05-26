@@ -1,0 +1,36 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <style>
+      :root { color-scheme: light dark; }
+      @media (prefers-color-scheme: dark) {
+        svg { color: #f1f5f9; }
+      }
+    </style>
+  </defs>
+
+  <!-- Outer plate circle -->
+  <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- Inner plate rim -->
+  <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+
+  <!-- Fork on right side -->
+  <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Fork handle -->
+    <path d="M 42 44 L 42 20"/>
+    <!-- Fork prongs -->
+    <line x1="37" y1="20" x2="37" y2="26"/>
+    <line x1="42" y1="20" x2="42" y2="26"/>
+    <line x1="47" y1="20" x2="47" y2="26"/>
+    <!-- Fork base connecting prongs -->
+    <path d="M 37 26 Q 42 28 47 26"/>
+  </g>
+
+  <!-- Knife on left side -->
+  <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Knife handle -->
+    <path d="M 22 44 L 22 24"/>
+    <!-- Knife blade -->
+    <path d="M 22 24 Q 20 22 22 18 Q 24 22 22 24" fill="none"/>
+  </g>
+</svg>

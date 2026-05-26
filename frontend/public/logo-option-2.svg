@@ -1,0 +1,7 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width="0">
+  <!-- Simple geometric up arrow in circle -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- Arrow pointing up -->
+  <path d="M32 44 L32 20 M26 26 L32 20 L38 26" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

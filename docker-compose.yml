@@ -1,0 +1,84 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: kitchen-optimizer-db
+    environment:
+      POSTGRES_DB: kitchen_optimizer
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Node.js Backend API
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: kitchen-optimizer-backend
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/kitchen_optimizer
+      NODE_ENV: development
+      PORT: 3001
+      FRONTEND_URL: http://localhost:3000
+    ports:
+      - "3001:3001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend/src:/app/src
+      - ./database:/app/database
+    command: npm run dev
+
+  # Python Camera Service
+  camera-service:
+    build:
+      context: camera-service
+      dockerfile: Dockerfile
+    container_name: kitchen-optimizer-camera
+    environment:
+      API_URL: http://backend:3001
+      CAMERA_RTSP_URL: rtsp://localhost:8554/stream
+      CAMERA_NAME: dining_room_cam
+      CAMERA_ZONE: dining_room
+      RESTAURANT_ID: f47ac10b-58cc-4372-a567-0e02b2c3d479
+      DEMO_MODE: "true"
+      DETECTION_INTERVAL: "2"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  # Next.js Frontend
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    container_name: kitchen-optimizer-frontend
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:3001
+      NODE_ENV: development
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/.next
+    command: npm run dev
+
+volumes:
+  postgres_data:
+
+networks:
+  default:
+    name: kitchen-optimizer-net
