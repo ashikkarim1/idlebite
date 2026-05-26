@@ -34,26 +34,26 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-40 pb-20 px-6 bg-white border-b border-gray-100">
+      <section className="pt-24 pb-12 px-6 bg-white border-b border-gray-100">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Left: Copy */}
             <div>
-              <div className="mb-8">
+              <div className="mb-6">
                 <span className="inline-block text-xs font-semibold text-slate-600 uppercase tracking-wider bg-slate-50 px-3 py-1.5 rounded-full">
                   For Restaurants & Delivery Platforms
                 </span>
               </div>
 
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
                 Stop paying for dead kitchen time
               </h1>
 
-              <p className="text-xl text-gray-700 mb-12 leading-relaxed">
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 IdleBite connects to your kitchen vision, learns your patterns, and automatically pushes intelligent offers across all delivery platforms. Fill your kitchen capacity. Protect your dining room.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <a
                   href="/dashboard"
                   className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-slate-800 transition text-lg"
@@ -67,7 +67,7 @@ export default function HomePage() {
                 </button>
               </div>
 
-              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
+              <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-200">
                 <div>
                   <div className="text-3xl font-bold text-slate-900 mb-2">4-6 hrs</div>
                   <div className="text-sm text-gray-600">Daily lost capacity</div>
@@ -142,9 +142,9 @@ export default function HomePage() {
       </section>
 
       {/* Trusted By Section */}
-      <section className="py-16 px-6 bg-slate-50 border-b border-gray-200">
+      <section className="py-12 px-6 bg-slate-50 border-b border-gray-200">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <p className="text-sm font-semibold text-slate-600 uppercase tracking-wider">Trusted by leading restaurant groups</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
@@ -168,14 +168,14 @@ export default function HomePage() {
       </section>
 
       {/* How It Works - The Three Steps */}
-      <section className="py-24 px-6 bg-white border-b border-gray-200">
+      <section className="py-16 px-6 bg-white border-b border-gray-200">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Three Steps to Kitchen Optimization</h2>
             <p className="text-lg text-gray-600">Simple. Clear. Proven.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Step 1: Connect */}
             <div className="bg-white rounded-xl p-8 border border-gray-200">
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white font-bold text-2xl mb-6 mx-auto">
@@ -238,11 +238,11 @@ export default function HomePage() {
           </div>
 
           {/* Timeline visualization */}
-          <div className="mt-20 pt-20 border-t border-gray-200">
+          <div className="mt-12 pt-12 border-t border-gray-200">
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-white">
               <h3 className="text-2xl font-bold mb-12 text-center">Your Kitchen Flow</h3>
 
-              <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
                 {/* Step 1: Kitchen */}
                 <div className="flex flex-col items-center">
                   <div className="w-24 h-24 rounded-full bg-white/20 border-2 border-white flex items-center justify-center mb-4">
@@ -311,7 +311,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-slate-50 border-b border-gray-200">
         <div className="container mx-auto max-w-6xl text-center">
           <h3 className="text-sm font-semibold text-slate-600 uppercase tracking-wider mb-8">Connected to all major platforms</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { name: 'Uber Eats', color: 'bg-black' },
               { name: 'DoorDash', color: 'bg-red-600' },
@@ -328,9 +328,9 @@ export default function HomePage() {
       </section>
 
       {/* Customer Testimonials */}
-      <section className="py-24 px-6 bg-white border-b border-gray-200">
+      <section className="py-16 px-6 bg-white border-b border-gray-200">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
             <p className="text-lg text-gray-600">Real results from real restaurants</p>
           </div>
@@ -381,9 +381,9 @@ export default function HomePage() {
       </section>
 
       {/* Results Section */}
-      <section className="py-24 px-6 bg-slate-50 border-b border-gray-200">
+      <section className="py-16 px-6 bg-slate-50 border-b border-gray-200">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>
             <p className="text-lg text-gray-600">What restaurants achieve with IdleBite</p>
           </div>
